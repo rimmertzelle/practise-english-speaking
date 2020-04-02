@@ -1,0 +1,24 @@
+extends layout
+
+block header    
+    nav(class=['breadcrumb'], aria-label='breadcrumbs')
+        ul
+            li
+                a(href='../') Home
+            li(class='is-active')
+                a(href='#' aria-current='page') Category
+
+block content
+    //- p #{question}
+    div.container
+        div(class=['columns', 'is-centered'])
+            div(class=['column', 'has-text-centered', 'is-half'])
+                h2(class=['title', 'is-2']) choose a category
+                p Please choose a category to practise your oral exam
+        div(class=['columns', 'is-centered'])
+            div(class=['column', 'is-half'])
+                div.buttons
+                    each catItem in categories
+                        a(class=['button', 'is-link'] href=`/category/${catItem.id}`) #{catItem.description}
+
+

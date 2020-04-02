@@ -1,0 +1,18 @@
+extends layout
+
+block header    
+    nav(class=['breadcrumb'], aria-label='breadcrumbs')
+        ul
+            li(class='is-active')
+                a(href='./' aria-current='page') Home
+
+block content
+    div.container
+        div(class=['columns', 'is-centered'])
+            div(class=['column', 'has-text-centered', 'is-half'])
+                h2(class=['title', 'is-2']) Practise speaking English
+                p Practise speacking English is a service for people who are wants to learn to speak English.
+                p This services originated was designed for people preparing for the Cambridge (CPE) oral exams.
+        div(class=['columns', 'is-centered'])
+            div(class=['column', 'has-text-centered', 'is-half'])
+                a(class=['button', 'is-link'] href='./category') start
